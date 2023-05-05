@@ -4,7 +4,8 @@ import terminalImage from "terminal-image";
 import fs from "fs";
 import fetch from "node-fetch";
 import sharp from "sharp";
-
+import dotenv from "dotenv";
+dotenv.config();
 const ai = new AI();
 
 const start = async () => {

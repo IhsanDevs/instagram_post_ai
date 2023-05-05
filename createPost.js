@@ -1,8 +1,14 @@
 import { IgApiClient } from "instagram-private-api";
+import dotenv from "dotenv";
+dotenv.config();
+
 export default async function createPost(url, caption) {
   try {
     const ig = new IgApiClient();
-    const { username, password } = process.env;
+    const { username, password } = {
+      username: process.env.USERNAME,
+      password: process.env.PASSWORD,
+    };
 
     // check if username and password are set
     if (!username || !password) {
